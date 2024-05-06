@@ -10,7 +10,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#showcase">Showcase</a></li>
@@ -22,9 +22,37 @@
     <section id="hero">
         <img src="your-photo.jpg" alt="" class="hero-image">
         <div class="hero-text">
-            <h1>Welcome to My World</h1>
+            <h1>Jacob Blemaster</h1>
+            <p>Expertise in inovation.</p>
             <a href="#portfolio" class="cta-button">View My Portfolio</a>
             <a href="resume.pdf" class="cta-button" download>Download Resume</a>
-        </section>
-    </body>
+        </div>
+    </section>
+    <!-- Define additional sections with corresponding IDs -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <!-- Portfolio content here -->
+    </section>
+    <section id="resume">
+        <h2>Resume</h2>
+        <!-- Resume content here -->
+    </section>
+    <section id="showcase">
+        <h2>Showcase</h2>
+        <!-- Showcase content here -->
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/xayrvkzz" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>    
+</body>
 </html>
+

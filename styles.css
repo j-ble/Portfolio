@@ -5,6 +5,15 @@ body {
     padding: 0;
     background: #202020; /* Darker background for futuristic feel */
     color: #CCC; /* Light grey text for high contrast */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+header {
+    position: fixed; /* Makes the header stay at the top */
+    width: 100%;
+    background: #202020; /* Darker background for futuristic feel */
+    color: #CCC; /* Light grey text for high contrast */
+    z-index: 1000; /* Ensures header is above other content */
 }
 
 /* Navigation styles */
@@ -24,6 +33,7 @@ nav ul {
 
 nav ul li {
     padding: 0 20px; /* Spaced out links */
+    display: inline;
 }
 
 nav ul li a {
@@ -32,6 +42,13 @@ nav ul li a {
     font-size: 16px; /* Moderately large text */
     font-weight: bold; /* Bold text for better visibility */
     transition: color 0.3s;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Adds an underline on hover */
+    color: #ccc; /* Lightens color on hover */
 }
 
 nav ul li a:hover {
@@ -46,6 +63,7 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 
 
@@ -54,34 +72,133 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: #FFF; /* White text for visibility */
+    width: 100%; /* Ensures text alignment within the container */
+    text-align: center; /* Centers the text */
+    padding: 20px; /* Adds padding around the text */
 }
 
 .hero-text h1 {
-    font-size: 3em; /* Larger heading */
-    margin: 0 0 0.5em 0; /* Adjusting margin for spacing */
+    margin: 0;
+    padding-bottom: 20px; /* Adds space below the headline */
+    font-size: 2.5em; /* Adjusts the size of the headline */
+    color: #ffffff; /* Ensures the text is visible */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Optional text shadow for better readability */
 }
+
+.hero-text h1, .hero-text p {
+    text-decoration: none; /* Removes underline from headers and paragraphs */
+}
+a, a:visited, a:hover, a:active {
+    text-decoration: none; /* Removes underline from all link states */
+}
+a, a:visited, a:hover, a:active {
+    text-decoration: none; /* Removes underline from all link states */
+}
+.cta-button {
+    text-decoration: none; /* Ensures buttons do not have an underline */
+}
+
 
 /* Call to Action (CTA) Button Styles */
 .cta-button {
-    font-size: 1.2em;
-    padding: 15px 30px;
-    margin-top: 20px;
-    background: #000; /* Black background */
-    border: 2px solid #1DB954; /* Bright green border */
-    color: #1DB954; /* Text matches border */
-    text-decoration: none;
-    border-radius: 50px; /* Rounded buttons for modern look */
-    transition: all 0.3s ease;
+    font-size: 16px;
+    padding: 15px 30px; /* Provides sufficient padding within the buttons */
+    margin: 10px 20px; /* Horizontal margin for space between buttons */
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-text p {
+    margin: 0;
+    padding-bottom: 40px; /* Adds space below the subheading */
+    font-size: 1.5em;
+    color: #cccccc; /* Lighter text color for subheading */
 }
 
 .cta-button:hover {
-    background: #1DB954; /* Green background on hover */
-    color: #000; /* Dark text for contrast on hover */
+    transform: scale(1.1); /* Slightly enlarges the button when hovered */
+    background-color: #369636; /* Changes the background color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2em; /* Slightly smaller font size for smaller screens */
+    }
+    .hero-text p {
+        font-size: 1.2em;
+    }
+    .cta-button {
+        padding: 12px 24px; /* Slightly smaller padding on smaller screens */
+    }
 }
 
 /* Utility styles for overall spacing and alignment */
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+section {
+    padding: 60px 20px; /* Padding to make content visible below fixed header */
+    min-height: 100vh; /* Minimum height for scrolling */
+    clear: both; /* Clears floated elements */
+}
+/* Contact Form Styling */
+#contact {
+    background: #333; /* Dark background for contrast */
+    color: #fff;
+    padding: 100px;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: #444; /* Slightly lighter than the background for visibility */
+    border: 1px solid #555; /* Making borders a bit more visible */
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+    border-color: #1DB954; /* Bright green color on focus */
+    background: #333;
+}
+
+#contact button {
+    padding: 12px 24px;
+    background-color: #1DB954; /* Consistent with the site's accent color */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #13a145; /* Darker green on hover */
+}
+
