@@ -1,0 +1,87 @@
+/* General body and font styles */
+body {
+    font-family: 'Arial', sans-serif; /* Modern, clean font */
+    margin: 0;
+    padding: 0;
+    background: #202020; /* Darker background for futuristic feel */
+    color: #CCC; /* Light grey text for high contrast */
+}
+
+/* Navigation styles */
+nav {
+    background: transparent; /* Transparent background for a sleek look */
+    padding: 10px 0; /* Padding for structure */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 20px; /* Spaced out links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF; /* White text for high contrast */
+    font-size: 16px; /* Moderately large text */
+    font-weight: bold; /* Bold text for better visibility */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1DB954; /* Bright green accent for hover */
+}
+
+/* Hero section styles */
+#hero {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('path-to-your-uploaded-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFF; /* White text for visibility */
+}
+
+.hero-text h1 {
+    font-size: 3em; /* Larger heading */
+    margin: 0 0 0.5em 0; /* Adjusting margin for spacing */
+}
+
+/* Call to Action (CTA) Button Styles */
+.cta-button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background: #000; /* Black background */
+    border: 2px solid #1DB954; /* Bright green border */
+    color: #1DB954; /* Text matches border */
+    text-decoration: none;
+    border-radius: 50px; /* Rounded buttons for modern look */
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #1DB954; /* Green background on hover */
+    color: #000; /* Dark text for contrast on hover */
+}
+
+/* Utility styles for overall spacing and alignment */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
