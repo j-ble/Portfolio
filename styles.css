@@ -202,3 +202,98 @@ section {
     background-color: #13a145; /* Darker green on hover */
 }
 
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.portfolio-item {
+    width: 30%; /* Adjust based on preference and responsiveness */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.portfolio-description {
+    padding: 10px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #369636;
+}
+
+#resume {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 70px;
+    text-align: center;
+}
+
+.resume-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.resume-item {
+    flex: 1 1 300px; /* Adjusts the basis to 300px but allows flexibility */
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Enhanced shadow for 3D effect */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.resume-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.resume-icon {
+    width: 80px; /* Larger icons for better visibility */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Centers the icon above the text */
+}
+
+.resume-content {
+    padding: 15px;
+}
+
+.resume-download-button {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resume-download-button:hover {
+    background-color: #369636;
+}
